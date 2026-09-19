@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Santa María Store</title>
+
+    <!-- Mobile Web App -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#090909">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Playball&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PRIMERA PANTALLA -->
+    <section class="hero">
+
+        <img src="fondo-de-carga.png" alt="Santa María Store" class="hero-bg">
+
+        <div class="hero-content">
+
+            <div class="hero-top-left">
+                ROPA<br>
+                ESTILO<br>
+                ACTITUD
+            </div>
+
+            <div class="hero-top-right">
+            </div>
+
+            <img src="Logo.png" alt="Santa María Store" class="hero-logo">
+
+            <div class="hero-slogan">
+                <span class="line">Ventas al por mayor</span>
+                <span class="line">y al detal</span>
+                <div class="hero-slogan-line"></div>
+            </div>
+
+            <div class="hero-bottom-left">
+                DESDE 2020<br>
+                COLOMBIA
+            </div>
+
+            <div class="hero-bottom-right">
+                GOOD<br>
+                CLOTHES<br>
+                BETTER<br>
+                ATTITUDE
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+    </section>
+
+
+    <!-- SEGUNDA PANTALLA - MENÚ -->
+    <main class="page">
+
+        <div class="cross cross-left"></div>
+        <div class="cross cross-right"></div>
+
+        <div class="vertical-text left-text">
+            SANTA MARIA STORE
+        </div>
+
+        <div class="top-right">
+            <span>ROPA</span>
+            <span>ESTILO</span>
+            <span>ACTITUD</span>
+        </div>
+
+        <section class="container">
+
+            <div class="logo-container">
+                <img src="Logo.png" alt="Santa María Store" class="logo">
+            </div>
+
+            <div class="social-links">
+
+                <a href="https://g.page/r/CWM_nbJ-yRR1ECE/review" class="social-button" target="_blank">
+                    <div class="icon google-icon"><span>G</span></div>
+                    <div class="divider"></div>
+                    <div class="button-text">
+                        <strong>GOOGLE RESEÑAS</strong>
+                        <small>TU OPINIÓN CUENTA</small>
+                    </div>
+                    <div class="arrow">&#8250;</div>
+                </a>
+
+                <a href="https://wa.me/573043620180" class="social-button" target="_blank">
+                    <div class="icon whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="divider"></div>
+                    <div class="button-text">
+                        <strong>WHATSAPP</strong>
+                        <small>ESCRÍBENOS AQUÍ</small>
+                    </div>
+                    <div class="arrow">&#8250;</div>
+                </a>
+
+                <a href="https://www.whatsapp.com/channel/0029Vb7vsUtEFeXgaXhwX83k" class="social-button" target="_blank">
+                    <div class="icon whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="divider"></div>
+                    <div class="button-text">
+                        <strong>CANAL DE DIFUSIÓN</strong>
+                        <small>NOVEDADES Y OFERTAS</small>
+                    </div>
+                    <div class="arrow">&#8250;</div>
+                </a>
+
+                <a href="https://www.instagram.com/santamarta.store2/" class="social-button" target="_blank">
+                    <div class="icon instagram-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="divider"></div>
+                    <div class="button-text">
+                        <strong>INSTAGRAM</strong>
+                        <small>SÍGUENOS</small>
+                    </div>
+                    <div class="arrow">&#8250;</div>
+                </a>
+
+                <a href="https://www.tiktok.com/@santamarta.store" class="social-button" target="_blank">
+                    <div class="icon tiktok-icon"><i class="fa-brands fa-tiktok"></i></div>
+                    <div class="divider"></div>
+                    <div class="button-text">
+                        <strong>TIKTOK</strong>
+                        <small>NUESTRO CONTENIDO</small>
+                    </div>
+                    <div class="arrow">&#8250;</div>
+                </a>
+
+            </div>
+
+            <div class="slogan">
+                <span>Es cuestión de</span>
+                <span>saber elegir</span>
+                <div class="slogan-line"></div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="footer-side">SINCE 2020</div>
+            <div class="footer-line"></div>
+            <div class="footer-line"></div>
+            <div class="footer-side">SANTA MARIA STORE</div>
+        </footer>
+
+    </main>
+
+    <script>
+        setTimeout(function() {
+            var target = document.querySelector('.page');
+            var start = window.pageYOffset;
+            var end = target.offsetTop;
+            var duration = 400;
+            var startTime = null;
+
+            function easeOutQuad(t) {
+                return t * (2 - t);
+            }
+
+            function scroll(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = Math.min((timestamp - startTime) / duration, 1);
+                window.scrollTo(0, start + (end - start) * easeOutQuad(progress));
+                if (progress < 1) requestAnimationFrame(scroll);
+            }
+
+            requestAnimationFrame(scroll);
+        }, 4000);
+    </script>
+
+</body>
+</html>
